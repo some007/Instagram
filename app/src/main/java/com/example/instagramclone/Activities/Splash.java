@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.instagramclone.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Splash extends AppCompatActivity {
 
@@ -54,7 +55,9 @@ public class Splash extends AppCompatActivity {
 
 
 
-    }
+
+        }
+
     private class MyAnimationListner implements Animation.AnimationListener
     {
 
@@ -78,5 +81,15 @@ public class Splash extends AppCompatActivity {
         }
     }
 
-
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(FirebaseAuth.getInstance().getCurrentUser() !=null) {
+            startActivity(new Intent(Splash.this,MainActivity.class));
+            finish();
+        }
+    }
 }
+
+
+
