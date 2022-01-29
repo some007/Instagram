@@ -3,29 +3,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Splash">
+    tools:context=".Activities.Splash">
 
     <ImageView
         android:id="@+id/icon_image"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/instagram"
-        android:visibility="gone" />
+        android:src="@drawable/instagram" />
 
     <LinearLayout
+        android:id="@+id/linear_layout"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:padding="10dp">
-        
-        
+
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="60dp"
-            android:src="@drawable/instagram_name"
-            android:scaleType="fitCenter"/>
+            android:scaleType="fitCenter"
+            android:src="@drawable/instagram_name" />
 
 
         <androidx.appcompat.widget.AppCompatButton
@@ -48,13 +48,6 @@
             android:text="Register"
             android:textAllCaps="false"
             android:layout_height="50dp"/>
-
-
-
-
-
-
-
 
 
 
